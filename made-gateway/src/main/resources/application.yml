@@ -1,0 +1,29 @@
+# 应用名称
+server:
+  port: 9000
+spring:
+  application:
+    name: made-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+#          lower-case-service-id: true
+          enabled: true #开启从注册中心动态创建路由的功能
+      routes:
+        - id: what
+          uri: lb://what-service
+          predicates:
+            - Path=/what/**
+        - id: how
+          uri: lb://how-service
+          predicates:
+            - Path=/how/**
+        - id: baidu
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/baidu/**
+

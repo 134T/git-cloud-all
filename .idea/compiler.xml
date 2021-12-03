@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="waht" />
+        <module name="how" />
+        <module name="made-gateway" />
+        <module name="made" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bpc-gateway" target="1.8" />
+      <module name="gateway" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bpc-gateway" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="git-project2" options="-parameters" />
+      <module name="how" options="-parameters" />
+      <module name="waht" options="-parameters" />
+    </option>
+  </component>
+</project>
